@@ -1,0 +1,39 @@
+<style>.img1{height: 100%;width: 200px;}</style>
+<?php  $url = $block->getBase(); ?>                     
+<div id="demo">
+    <h2>Brand</h2>
+    <div id="owl-demo" class="owl-carousel brand">
+        <div class="item">
+        <?php
+        foreach ($block->getPostCollection() as $key=>$post){ 
+            $d = $block->getStoreManagerData();
+            $v = $post->getImage();
+            $img = $d.$v; 
+            ?>
+             <tr>
+                <td>
+                    <a href="<?= $url ?>single/index/single/id/<?= $post->getBrandmanagement_id() ?>">
+                    <img class="img1" src="<?= $img ?>"/>    
+                    </a>  
+                </td>
+            </tr> 
+       <?php  } ?>
+        </div>
+    </div>
+</div>
+<script>
+    require([
+            'owlcarousel',
+    ], function ($) {
+        jQuery(document).ready(function () {
+            jQuery("#owl-demo").owlCarousel({
+                navigation: false,
+                center: true,
+                autoWidth: true,
+                autoplay: true
+            });
+        });
+    });
+</script>
+</body>
+</html>

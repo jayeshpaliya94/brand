@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+  <menu>
+        <add id="commercepundit_brandmanagement::core" title="Brandmanagement" module="Commercepundit_Brandmanagement" sortOrder="1" parent="Magento_Backend::content" resource="Commercepundit_Brandmanagement::sample"/>
+        <add id="commercepundit_brandmanagement::test" title="Brand List" module="Commercepundit_Brandmanagement" sortOrder="2" parent="commercepundit_brandmanagement::core" action="commercepundit_brandmanagement/items/" resource="Commercepundit_Brandmanagement::items"/>
+    </menu>
+</config>
